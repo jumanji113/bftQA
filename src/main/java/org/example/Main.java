@@ -1,5 +1,8 @@
 package org.example;
 
+import org.example.Homework3and4Classes.Car;
+import org.example.Homework3and4Classes.Cat;
+
 public class Main {
     public static void main(String[] args) {
         Cat cat1 = new Cat(10, "Pushok");

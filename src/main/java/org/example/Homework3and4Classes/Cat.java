@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Homework3and4Classes;
 
 public class Cat {
     public int age;
