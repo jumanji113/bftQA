@@ -7,7 +7,7 @@ public class ArrayAndStringLearning {
         System.out.println(strings[1].toLowerCase());
         for (int i = 0; i < strings.length; i++) {
             if(strings[i].indexOf("О") == 1){
-                StringBuilder stringBuilder = new StringBuilder(strings[i]);
+                StringBuilder stringBuilder = new StringBuilder(strings[i]);//исправил на i
                 System.out.println(stringBuilder.insert(3, " "));
             }
         }
