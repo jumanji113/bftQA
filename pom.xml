@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.api>5.9.2</junit.api>
         <aspectj>1.9.21</aspectj>
@@ -26,11 +26,10 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Selenide -->
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
-            <version>6.16.0</version> <!-- Обновлена версия Selenide -->
+            <version>6.19.0</version>
         </dependency>
 
         <!-- REST Assured -->
