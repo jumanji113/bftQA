@@ -1,13 +1,14 @@
 package Pages;
 
+import PageElements.PageElementYandex;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selenide.$x;
 
 public class YandexMainPage {
-    SelenideElement searchELem= $x("//input[@placeholder='Найдётся всё']");
-    SelenideElement searchButton = $x("//button[text()='Найти']");
+    private PageElementYandex searchELem= new PageElementYandex($x("//input[@placeholder='Найдётся всё']"));
+    private PageElementYandex searchButton = new PageElementYandex($x("//button[text()='Найти']"));
 
     @Step("Вводим нужное значение в инпут")
     public YandexMainPage setInputValue(String value){
