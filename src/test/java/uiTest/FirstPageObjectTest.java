@@ -1,19 +1,22 @@
 package uiTest;
 
-import com.codeborne.selenide.Condition;
+import Pages.YandexMainPage;
+
 import static com.codeborne.selenide.Selenide.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 
-public class FirstUi {
+public class FirstPageObjectTest {
 
     @Test
     @DisplayName("Проверка поиска и иконки яндекса")
     public void firstTest(){
+        String expectedValue = "bft";
         open("https://ya.ru/");
-        $x("//input[@placeholder='Найдётся всё']").setValue("bft");
-        $x("//button[text()='Найти']").click();
-        $x("//a[@class='HeaderLogo']").shouldBe(Condition.visible);
+        YandexMainPage ymp = new YandexMainPage();
+        ymp.setInputValue(expectedValue)
+                .clickButton()
+                .checkLogo();
     }
 }
