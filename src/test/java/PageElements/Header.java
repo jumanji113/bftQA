@@ -6,11 +6,16 @@ import io.qameta.allure.Step;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import static com.codeborne.selenide.Selenide.$x;
+
 
 @Data
-@AllArgsConstructor
 public class Header {
     private SelenideElement selector;
+
+    public Header(String selector) {
+        this.selector = $x(selector);
+    }
 
     @Step("Проверяем наличие лого")
     public Header checkLogo() {
