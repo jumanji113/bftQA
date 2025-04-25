@@ -3,6 +3,8 @@ package uiTest;
 import Pages.YandexMainPage;
 
 import static com.codeborne.selenide.Selenide.*;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -17,5 +19,17 @@ public class FirstPageObjectTest extends BaseTest{
         ymp.setInputValue(EXPECTED_VALUE)
                 .clickButton()
                 .checkLogo();
+    }
+
+    @Test
+    @DisplayName("Проверка исключений")
+    public void exeption(){
+        System.out.println((String)null);
+        try {
+            Assertions.assertTrue(false);
+        } catch (AssertionError e){
+            System.out.println("Возникла ошибка типа : " + e);
+        }
+
     }
 }
