@@ -7,15 +7,14 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 
-public class FirstPageObjectTest {
+public class FirstPageObjectTest extends BaseTest{
 
+    private final static String EXPECTED_VALUE = "bft";
     @Test
     @DisplayName("Проверка поиска и иконки яндекса")
     public void firstTest(){
-        String expectedValue = "bft";
-        open("https://ya.ru/");
         YandexMainPage ymp = new YandexMainPage();
-        ymp.setInputValue(expectedValue)
+        ymp.setInputValue(EXPECTED_VALUE)
                 .clickButton()
                 .checkLogo();
     }

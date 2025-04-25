@@ -7,19 +7,16 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class YandexMainPage {
-    SelenideElement searchInput= $x("//input[@placeholder='Найдётся всё']");
-    SelenideElement searchButton = $x("//button[text()='Найти']");
-
-    Button buttonSearch = new Button("searchButton", searchButton);
-    Input inputText = new Input(searchInput);
+    private final Input searchInput= new Input("//input[@placeholder='Найдётся всё']");
+    private final Button searchButton = new Button("//button[text()='Найти']");
 
     public YandexMainPage setInputValue(String value){
-        inputText.setValue(value);
+        searchInput.setValue(value);
         return this;
     }
 
     public SearchPage clickButton(){
-        buttonSearch.buttonClick();
+        searchButton.clickButton();
         return new SearchPage();
     }
 
